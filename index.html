@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Html 5 y CSS</title>
+  <link href="assets/css/estilo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header class="estilo_bloque">
+    <img class="img-circulo" src="assets/img/foto_perfil.jpg">
+    <p>Armando Cardona Paiz</p>
+
+    <!-- Menu tipo Navegador -->
+    <nav>
+      <a href="#">Inicio</a> |
+      <a href="#">Php</a> |
+      <a href="#">.Net</a> |
+      <a href="#">Java</a> |
+    </nav>
+  </header>
+  <div class="estilo_bloque">
+    <figure align="justify">
+      <h3>Lenguajes de Programación</h3>
+      <ol type="1" start="1">
+        <!-- LISTA ORDENADA  -->
+        <li>Paginas Web</li>
+        <ul class="vi1">
+          <!-- VIÑETAS  -->
+          <li>Jsp</li>
+          <li>Aspx</li>
+          <li>Php</li>
+        </ul>
+        <li>Aplicaciones</li>
+        <ul class="vi2">
+          <li>Java</li>
+          <li>Visual Basic</li>
+          <li>C#</li>
+        </ul>
+    </figure>
+  </div>
+  <div class="estilo_bloque">
+    <table>
+      <tr>
+        <td colspan="2">Programacion Web</td>
+      </tr>
+      <tr>
+        <td>Asp</td>
+        <td>Jsp</td>
+      </tr>
+      <tr>
+        <td>Php</td>
+        <td>Ruby</td>
+      </tr>
+      <tr>
+        <td>Python</td>
+        <td>Go</td>
+      </tr>
+    </table>
+  </div>
+  <div class="estilo_bloque">
+    <form>
+      <input type="text" id="txt_nombres" name="txt_nombres" placeholder="Ingrese Nombres" required>
+      <input type="text" id="txt_apellidos" name="txt_apellidos" placeholder="Ingrese Apellidos" required>
+      <input type="number" id="txt_telefono" name="txt_telefono" placeholder="Ingrese Numero Telefonico" required>
+      <input type="email" id="txt_correo" name="txt_correo" placeholder="Ingrese Correo Electronico" required>
+      <input type="date" id="txt_fn" name="txt_fn" placeholder="Ingrese Fecha Nacimiento" required>
+      <textarea id="txt_mensaje" name="txt_mensaje" placeholder="Ingrese el Mensaje"></textarea>
+      <input type="submit" class="boton" value="Enviar" onclick="enviar();">
+    </form>
+  </div>
+  <div class="estilo_bloque" id="redes_sociales">
+    <h3>Redes Sociales</h3>
+    <a href="#"><img src="assets/img/facebook.png"></a>
+    <a href="#"><img src="assets/img/twitter.png"></a>
+  </div>
+
+  <script>
+    function enviar() {
+      let nombres = document.getElementById('txt_nombres').value;
+      let apellidos = document.getElementById('txt_apellidos').value;
+      let telefono = document.getElementById('txt_telefono').value;
+      let correo = document.getElementById('txt_correo').value;
+      let fn = document.getElementById('txt_fn').value;
+      let mensaje = document.getElementById('txt_mensaje').value;
+
+      alert(`${nombres}\n${apellidos}\n${telefono}\n${correo}\n${fn}\n${mensaje}`);
+    }
+  </script>
+</body>
+<footer>
+  <p align=center>Aprende a Programar Fácil y Rápido &copy;</p>
+</footer>
+
+</html>
